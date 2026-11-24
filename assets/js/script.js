@@ -4,7 +4,77 @@ const img = p => p.image_url || (/^https?:\/\//.test(p.image || '') ? p.image : 
 function loadCart() { try { const saved = JSON.parse(localStorage.getItem('riderBikeCart') || '[]'); return new Map(saved.filter(x => Array.isArray(x) && x.length === 2 && PRODUCTS.some(p => p.id === x[1]?.id)).map(([key, item]) => [key, { id: item.id, size: String(item.size || 'Única'), qty: Math.max(1, Math.min(99, Number(item.qty) || 1)) }])); } catch { return new Map(); } }
 const cart = loadCart();
 function saveCart() { try { localStorage.setItem('riderBikeCart', JSON.stringify([...cart])); } catch { } }
-function card(p) { const state = p.stockStatus || 'available', stateLabel = { available: 'DISPONIBLE', soldout: 'AGOTADO', coming: 'PRÓXIMAMENTE' }[state] || 'DISPONIBLE'; return `<article class="product-card ${state === 'soldout' ? 'is-soldout' : ''}"><div class="product-photo"><button data-product="${p.id}" aria-label="Ver ${esc(p.name)}"><img src="${img(p)}" alt="${esc(p.name)} — fotografía ilustrativa" loading="lazy"></button><span class="stock-status ${state}">${stateLabel}</span>${p.badge ? `<span class="badge">${p.oldPrice ? '-20% · ' : ''}${p.badge}</span>` : ''}</div><div class="product-info"><small>${p.category.toUpperCase()} ${p.type ? ' / ' + p.type : ''}</small><h3>${p.name}</h3><div class="price">${money(p.price)} ${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ''}</div><div class="product-meta"><span>Tallas: ${p.sizes.join(' · ')}</span><span>${state === 'available' ? 'Listo para consultar' : state === 'soldout' ? 'Sin stock' : 'Próximamente'}</span></div><div class="product-meta"><span>Colores: ${p.colors.join(' · ')}</span></div><div class="product-actions"><button class="btn outline" data-product="${p.id}">Ver detalles</button><button class="btn" data-consult="${p.id}">${state === 'soldout' ? 'Consultar reposición' : 'WhatsApp ↗'}</button></div></div></article>`; }
+
+function card(p) {
+    const state = p.stockStatus || 'available';
+
+    let badgeText = '';
+    let badgeClass = '';
+
+    if (state === 'soldout') {
+        badgeText = 'AGOTADO';
+        badgeClass = 'soldout';
+    }
+    else if (state === 'coming') {
+        badgeText = 'PRÓXIMAMENTE';
+        badgeClass = 'coming';
+    }
+    else if (p.oldPrice) {
+        badgeText = 'DESCUENTO';
+        badgeClass = 'discount';
+    }
+    else if (p.badge) {
+        badgeText = p.badge;
+        badgeClass = 'featured';
+    }
+    else {
+        badgeText = 'DISPONIBLE';
+        badgeClass = 'available';
+    }
+
+    return `
+        <article class="product-card ${state === 'soldout' ? 'is-soldout' : ''}">
+            <div class="product-photo">
+
+                <button data-product="${p.id}" aria-label="Ver ${esc(p.name)}">
+                    <img src="${img(p)}" alt="${esc(p.name)} — fotografía ilustrativa" loading="lazy">
+                </button>
+
+                <span class="stock-status ${badgeClass}">
+                    ${esc(badgeText)}
+                </span>
+
+            </div>
+
+            <div class="product-info">
+                <small>${esc(p.category.toUpperCase())} ${p.type ? ' / ' + esc(p.type) : ''}</small>
+
+                <h3>${esc(p.name)}</h3>
+
+                <div class="price">
+                    ${money(p.price)}
+                    ${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ''}
+                </div>
+
+                <div class="product-meta">
+                    <span>Tallas: ${p.sizes.map(esc).join(' · ')}</span>
+                    <span>${state === 'available' ? 'Listo para consultar' : state === 'soldout' ? 'Sin stock' : 'Próximamente'}</span>
+                </div>
+
+                <div class="product-meta">
+                    <span>Colores: ${p.colors.map(esc).join(' · ')}</span>
+                </div>
+
+                <div class="product-actions">
+                    <button class="btn outline" data-product="${p.id}">Ver detalles</button>
+                    <button class="btn" data-consult="${p.id}">
+                        ${state === 'soldout' ? 'Consultar reposición' : 'WhatsApp ↗'}
+                    </button>
+                </div>
+            </div>
+        </article>
+    `;
+}
 function filtered() { let q = $('#search').value.trim().toLowerCase(); let products = PRODUCTS.filter(p => (!q || [p.name, p.category, p.group, p.reference, p.brand, p.type].join(' ').toLowerCase().includes(q)) && (!$('#category-filter').value || p.category === $('#category-filter').value) && (!$('#type-filter').value || p.type === $('#type-filter').value) && (!$('#brand-filter').value || p.brand === $('#brand-filter').value) && (!$('#size-filter').value || p.sizes.includes($('#size-filter').value)) && (!$('#availability-filter') || !$('#availability-filter').value || $('#availability-filter').value === (p.stockStatus || 'available')) && (!$('#price-filter').value || $('#price-filter').value === '99999999' || p.price <= Number($('#price-filter').value))); if ($('#price-filter').value === '99999999') products.sort((a, b) => b.price - a.price); return products; }
 function renderCatalog() { const products = filtered(); $('#catalog').innerHTML = products.length ? products.slice(0, visible).map(card).join('') : '<p>No encontramos productos con estos filtros. Prueba otra búsqueda o limpia los filtros.</p>'; $('#result-count').textContent = products.length + ' productos encontrados'; $('#show-more').hidden = products.length <= visible; }
 function selectCategory(category = '', query = '') { for (const s of document.querySelectorAll('.filters select')) s.value = ''; $('#category-filter').value = category; $('#search').value = query; visible = 8; renderCatalog(); $('#bicicletas').scrollIntoView({ behavior: 'smooth' }); }

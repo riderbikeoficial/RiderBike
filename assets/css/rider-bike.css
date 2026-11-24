@@ -3737,3 +3737,36 @@ textarea:focus-visible {
         font-size: 14px;
     }
 }
+
+
+/* Etiquetas de productos RIDER BIKE */
+
+.stock-status.available {
+    background: #ffffff;
+    color: #171717;
+    border-color: #ffffff;
+}
+
+.stock-status.soldout {
+    background: #333333;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.stock-status.coming {
+    background: #ff6a00;
+    color: #111111;
+    border-color: #ff6a00;
+}
+
+.stock-status.discount {
+    background: #ff6a00;
+    color: #111111;
+    border-color: #ff6a00;
+}
+
+.stock-status.featured {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+}
