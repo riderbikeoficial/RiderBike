@@ -1,25 +1,331 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RIDER BIKE | Bicicletas, repuestos y taller en Bogotá</title><meta name="theme-color" content="#0c3025"><meta name="description" content="Encuentra bicicletas, repuestos MTB, accesorios y herramientas. Taller de bicicletas y mantenimiento en Bogotá. Conoce el catálogo de RIDER BIKE."><meta property="og:title" content="RIDER BIKE • Todo para salir a rodar"><meta property="og:description" content="Bicicletas, repuestos, accesorios y taller en Bogotá."><meta property="og:type" content="website"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230c3025'/%3E%3Ctext x='9' y='30' fill='%23c2ef46' font-size='30' font-family='sans-serif' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/data.js"></script><script defer src="assets/js/script.js"></script></head><body><a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div class="topline"><span>BOGOTÁ, COLOMBIA • HECHOS PARA RODAR</span><span>Bicicletas · Repuestos · Taller</span></div>
-<header><a class="logo logo-image" href="#inicio" aria-label="RIDER BIKE - Inicio"><img src="assets/img/rider-logo.png" alt="Logo Rider Bike"><span>RIDER BIKE<small>BIKE STORE & TALLER</small></span></a><nav id="nav"><a href="#inicio">Inicio</a><a href="#bicicletas">Bicicletas</a><a href="#personalizadas">Personalizadas</a><a href="#repuestos">Repuestos</a><a href="#accesorios">Accesorios</a><a href="#taller">Taller</a><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav><div class="header-actions"><button class="icon-btn" id="search-toggle" aria-label="Buscar productos">⌕</button><button class="icon-btn" id="cart-open" aria-label="Abrir carrito">◧ <span id="cart-count">0</span></button><a class="btn small" href="#bicicletas">Ver catálogo ↗</a><button class="header-wa text-btn" data-wa="Hola, quiero información.">WhatsApp</button><button id="menu-toggle" class="icon-btn mobile" aria-label="Abrir menú" aria-expanded="false">☰</button></div></header>
-<main id="contenido"><section class="hero" id="inicio"><div class="hero-bg" id="hero-image"></div><div class="hero-content"><span class="eyebrow">TU PRÓXIMA RUTA EMPIEZA AQUÍ</span><h1>Todo para tu<br>bicicleta.<br><em>Todo para salir<br>a rodar.</em></h1><p>Encuentra bicicletas, repuestos, accesorios y servicio técnico especializado para mantenerte siempre listo para la ruta.</p><div class="actions"><a class="btn" href="#bicicletas">Explorar catálogo ↗</a><button class="btn outline light" data-wa="Hola, quiero cotizar un producto.">Cotizar por WhatsApp</button></div><div class="hero-tags"><span>🚲 Bicicletas</span><span>⚙ Repuestos</span><span>⚒ Taller</span><span>◈ Accesorios</span></div></div><div class="hero-note"><span>LA CIUDAD. LA MONTAÑA. TU CAMINO.</span><strong>Nos mueve<br>lo mismo que a ti.</strong></div></section>
-<div class="benefits"><span>↗ Asesoría para elegir mejor</span><span>⚙ Repuestos para cada ruta</span><span>⚒ Servicio técnico especializado</span><span>◎ Bogotá, sobre dos ruedas</span></div>
-<section class="section" id="categorias"><div class="section-heading"><div><span class="eyebrow">UN SOLO LUGAR. TODAS LAS POSIBILIDADES.</span><h2>Encuentra lo que necesitas</h2></div><a href="#bicicletas">Explora la tienda ↗</a></div><div class="category-grid" id="category-grid"></div></section>
-<section class="section catalog-section" id="bicicletas"><div class="section-heading"><div><span class="eyebrow">ELIGE TU COMPAÑERA DE RUTA</span><h2>Bicicletas para ir más lejos.</h2></div><span class="muted">Precios de referencia en COP</span></div><div class="searchbar"><span>⌕</span><input id="search" type="search" placeholder="Busca bicicletas, repuestos, accesorios..." aria-label="Buscar en todo el catálogo"><button class="text-btn" id="clear-search">Limpiar</button></div><div class="filters"><select id="category-filter" aria-label="Categoría"><option value="">Todas las categorías</option></select><select id="type-filter" aria-label="Tipo"><option value="">Todos los tipos</option><option>MTB</option><option>Urbana</option><option>Ruta</option><option>Gravel</option><option>Eléctrica</option><option>Infantil</option></select><select id="brand-filter" aria-label="Marca"><option value="">Todas las marcas</option></select><select id="size-filter" aria-label="Talla"><option value="">Todas las tallas</option><option>S</option><option>M</option><option>L</option><option>Única</option></select><select id="availability-filter" aria-label="Disponibilidad"><option value="">Todos los estados</option><option value="available">Disponible</option><option value="soldout">Agotado</option><option value="coming">Próximamente</option></select><select id="price-filter" aria-label="Precio"><option value="">Cualquier precio</option><option value="100000">Hasta $100.000</option><option value="500000">Hasta $500.000</option><option value="2000000">Hasta $2.000.000</option><option value="99999999">Mayor precio primero</option></select></div><p id="result-count" class="muted" aria-live="polite"></p><div id="catalog" class="product-grid"></div><button class="btn outline more" id="show-more">Ver más productos</button></section>
-<section id="repuestos" class="section parts"><div class="section-heading"><div><span class="eyebrow">CADA PIEZA CUENTA</span><h2>Repuestos y componentes</h2><p>El detalle que hace que todo vuelva a funcionar.</p></div><button class="btn outline" data-filter="Repuestos">Ver todos los repuestos ↗</button></div><div class="parts-grid" id="parts-grid"></div></section>
-<section class="finder section"><div><span class="eyebrow">TE AYUDAMOS A ENCONTRARLO</span><h2>¿No sabes qué<br>repuesto necesitas?</h2><p>Explora opciones por tipo de bicicleta. Confirma medidas y referencia con el taller antes de comprar.</p></div><div class="finder-form"><label>Tipo de bicicleta<select id="finder-type"><option>MTB</option><option>Urbana</option><option>Ruta</option><option>Gravel</option><option>Eléctrica</option></select></label><label>Componente<select id="finder-part"><option>Frenos</option><option>Transmisión</option><option>Ruedas</option><option>Suspensión</option><option>Dirección</option><option>Otros</option></select></label><button id="find-parts" class="btn">Encontrar opciones ↗</button><button class="text-btn" data-wa="Hola, necesito ayuda para identificar un repuesto.">¿Tienes dudas? Pregúntanos por WhatsApp</button><div id="finder-result" aria-live="polite"></div></div></section>
-<section class="section" id="destacados"><div class="section-heading"><div><span class="eyebrow">LOS FAVORITOS DE LA RUTA</span><h2>Productos destacados</h2></div><a href="#bicicletas">Ver catálogo completo ↗</a></div><div class="product-grid" id="featured"></div></section>
-<section class="section custom-bikes" id="personalizadas"><div class="section-heading"><div><span class="eyebrow">UNA BICICLETA CON TU IDENTIDAD</span><h2>Tu idea. Tu estilo.<br><em>Tu bicicleta.</em></h2><p>También creamos bicicletas personalizadas. Cuéntanos cómo imaginas la tuya y hagamos que cada detalle tenga tu sello.</p></div><div class="custom-intro"><span>DISEÑO · COMPONENTES · MONTAJE</span><button class="btn" data-wa="Hola, quiero cotizar una bicicleta personalizada. Tengo una idea de diseño y quiero conocer opciones.">Diseña la tuya ↗</button></div></div><div class="custom-gallery"><figure class="custom-photo large"><img src="assets/img/custom-bike-01.webp" alt="Bicicleta personalizada RIDER BIKE, modelo de inspiración" loading="lazy"><figcaption><span>01 / CUSTOM BUILD</span><strong>Una bici, tu identidad</strong></figcaption></figure><figure class="custom-photo"><img src="assets/img/custom-bike-02.webp" alt="Detalle de bicicleta personalizada" loading="lazy"><figcaption><span>02 / COMPONENTES</span><strong>Detalles que cuentan</strong></figcaption></figure><figure class="custom-photo"><img src="assets/img/custom-bike-03.webp" alt="Proceso de montaje de bicicleta personalizada" loading="lazy"><figcaption><span>03 / MONTAJE</span><strong>Armada para ti</strong></figcaption></figure><figure class="custom-photo"><img src="assets/img/custom-bike-04.webp" alt="Bicicleta custom para rutas" loading="lazy"><figcaption><span>04 / TU PRÓXIMA RUTA</span><strong>Lista para rodar</strong></figcaption></figure></div><p class="custom-note">Cada proyecto empieza con tu idea. Personalizamos estilo, componentes y montaje para crear una bicicleta que se sienta tuya.</p></section>
-<section class="workshop" id="taller"><div class="workshop-image" id="workshop-image"><span class="photo-label">EL CUIDADO QUE TU BICI MERECE.</span></div><div class="workshop-copy"><span class="eyebrow">MANOS EXPERTAS. KILÓMETROS POR DELANTE.</span><h2>Tu bici, lista<br>para la<br><em>próxima salida.</em></h2><p>Servicio técnico especializado. Reparamos, ajustamos y mantenemos tu bicicleta para que puedas seguir rodando con seguridad.</p><div id="service-list" class="service-list"></div><button class="btn" data-wa="Hola, quiero agendar un servicio para mi bicicleta.">Agendar servicio ↗</button></div></section>
-<section class="section" id="servicios"><div class="section-heading"><div><span class="eyebrow">DALE MÁS VIDA A TU BICICLETA</span><h2>Un mantenimiento a tu medida</h2></div><span class="muted">Valores ilustrativos · Repuestos por separado</span></div><div class="plans" id="plans"></div></section>
-<section class="section" id="accesorios"><div class="section-heading"><div><span class="eyebrow">EQUÍPATE PARA EL CAMINO</span><h2>Accesorios para ciclistas</h2></div><button class="btn outline" data-filter="Accesorios">Ver accesorios ↗</button></div><div id="accessory-tags" class="chips"></div><div class="product-grid" id="accessories"></div></section>
-<section class="section tools-banner" id="herramientas"><div><span class="eyebrow">EL AJUSTE PERFECTO</span><h2>Herramientas<br>y mantenimiento</h2><p>Desde un ajuste en casa hasta el trabajo de taller.</p><div id="tool-tags" class="chips"></div><button class="btn" data-filter="Herramientas">Ver herramientas ↗</button></div><img id="tools-image" alt="Herramientas y componentes para mantenimiento de bicicletas" loading="lazy"></section>
-<section class="section" id="ofertas"><div class="section-heading"><div><span class="eyebrow">MÁS RUTA POR MENOS</span><h2>Ofertas de la semana</h2></div><span class="muted">Ofertas de ejemplo · Sujetas a confirmación</span></div><div class="product-grid" id="offers"></div></section>
-<section class="brands section"><span class="eyebrow">TRABAJAMOS CON MARCAS DE CONFIANZA</span><div><b>ALTURA</b><b>velora.</b><b>TRAK /</b><b>NÓMADA</b><b>TORQ</b></div><small>Marcas ilustrativas reemplazables</small></section>
-<section class="section" id="nosotros"><div class="section-heading"><div><span class="eyebrow">BOGOTÁ SE VIVE PEDALEANDO</span><h2>Somos de los que salen a rodar.</h2></div><p class="about-text">RIDER BIKE reúne todo lo que necesita tu bicicleta: una nueva compañera de ruta, la pieza adecuada y un taller que la cuida. De la ciclovía al camino de montaña, queremos acompañar tu próxima salida.</p></div><h3>Nuestros clientes</h3><p class="muted">Testimonios ilustrativos para esta presentación.</p><div class="testimonials" id="testimonials"></div></section>
-<section class="section"><div class="section-heading"><div><span class="eyebrow">NUESTRA PASIÓN NO SE QUEDA EN LA TIENDA</span><h2>Así vivimos el ciclismo</h2></div></div><div class="gallery" id="gallery"></div></section>
-<section class="section contact" id="contacto"><div id="ubicacion"><span class="eyebrow">NOS VEMOS EN LA TIENDA</span><h2>Visítanos</h2><p>Tu próxima ruta puede empezar con una conversación.</p><div id="contact-details"></div><h3>Horarios</h3><p>Horario de atención por confirmar directamente con RIDER BIKE.</p><iframe title="Mapa de Bogotá, ubicación general" src="https://maps.google.com/maps?q=Bogota%20Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><small>Mapa general de Bogotá; ubicación del local pendiente.</small></div><form id="contact-form"><h3>Hablemos de tu bicicleta</h3><div class="form-grid"><label>Nombre<input name="nombre" required autocomplete="name"></label><label>Teléfono<input name="telefono" type="tel" required autocomplete="tel"></label><label>Correo<input name="correo" type="email" required autocomplete="email"></label><label>Tipo de consulta<select name="tipo"><option>Comprar un producto</option><option>Repuestos y compatibilidad</option><option>Agendar taller</option><option>Otra consulta</option></select></label></div><label>Producto o repuesto que buscas<input name="producto"></label><label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label><button class="btn" type="submit">Enviar consulta ↗</button><p class="muted">La consulta se prepara para WhatsApp. Tú decides cuándo enviarla.</p><p id="form-status" role="status"></p></form></section>
-</main><footer><div class="footer-top"><div><a class="logo logo-image footer-logo" href="#inicio" aria-label="RIDER BIKE - Inicio"><img src="assets/img/rider-logo.png" alt="Logo Rider Bike"><span>RIDER BIKE</span></a><p>Todo para tu bicicleta.<br>Todo para salir a rodar.</p></div><div><h4>Bicicletas</h4><a href="#bicicletas">MTB</a><a href="#bicicletas">Urbanas</a><a href="#bicicletas">Ruta</a><a href="#bicicletas">Eléctricas</a></div><div><h4>Repuestos</h4><a href="#repuestos">Transmisión</a><a href="#repuestos">Frenos</a><a href="#repuestos">Ruedas</a><a href="#repuestos">Componentes</a></div><div><h4>Servicios</h4><a href="#taller">Taller</a><a href="#servicios">Mantenimiento</a><a href="#taller">Reparaciones</a></div><div><h4>Atención</h4><a href="#contacto">Contacto</a><button data-wa="Hola, quiero información.">WhatsApp</button><a href="#ubicacion">Ubicación y horarios</a><button id="social-info">Instagram · Facebook<br>TikTok · YouTube</button></div></div><div class="footer-bottom"><span>© 2026 RIDER BIKE. Todos los derechos reservados.</span><span>Demostración · Productos y datos comerciales ficticios</span></div></footer>
-<button class="wa-float" data-wa="Hola, quiero información sobre RIDER BIKE." aria-label="Consultar por WhatsApp">◉ <span>¿Te ayudamos?</span></button><dialog id="product-dialog"><button class="close" data-close aria-label="Cerrar">×</button><div id="product-detail"></div></dialog><dialog id="cart-dialog"><button class="close" data-close aria-label="Cerrar">×</button><h2>Tu próxima rodada</h2><div id="cart-items"></div><div id="cart-total"></div><button class="btn" id="checkout">Solicitar pedido por WhatsApp ↗</button></dialog><dialog id="wa-dialog"><button class="close" data-close aria-label="Cerrar">×</button><h2>Tu consulta está lista</h2><p>El WhatsApp de la tienda aún no está configurado. Puedes copiar tu mensaje.</p><textarea id="wa-message" rows="6" readonly></textarea><button class="btn" id="copy-message">Copiar mensaje</button><p id="copy-status" role="status"></p></dialog><div id="toast" role="status"></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="assets/js/supabase-config.js"></script>
-<script src="assets/js/store-sync.js"></script>
-</body></html>
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RIDER BIKE | Bicicletas, repuestos y taller en Bogotá</title>
+    <meta name="theme-color" content="#0c3025">
+    <meta name="description"
+        content="Encuentra bicicletas, repuestos MTB, accesorios y herramientas. Taller de bicicletas y mantenimiento en Bogotá. Conoce el catálogo de RIDER BIKE.">
+    <meta property="og:title" content="RIDER BIKE • Todo para salir a rodar">
+    <meta property="og:description" content="Bicicletas, repuestos, accesorios y taller en Bogotá.">
+    <meta property="og:type" content="website">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230c3025'/%3E%3Ctext x='9' y='30' fill='%23c2ef46' font-size='30' font-family='sans-serif' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/rider-bike.css">
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="topline"><span>BOGOTÁ, COLOMBIA • HECHOS PARA RODAR</span><span>Bicicletas · Repuestos · Taller</span>
+    </div>
+    <header><a class="logo logo-image" href="#inicio" aria-label="RIDER BIKE - Inicio"><img
+                src="assets/img/rider-logo.png" alt="Logo Rider Bike"><span>RIDER BIKE<small>BIKE STORE &
+                    TALLER</small></span></a>
+        <nav id="nav"><a href="#inicio">Inicio</a><a href="#bicicletas">Bicicletas</a><a
+                href="#personalizadas">Personalizadas</a><a href="#repuestos">Repuestos</a><a
+                href="#accesorios">Accesorios</a><a href="#taller">Taller</a><a href="#servicios">Servicios</a><a
+                href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+        <div class="header-actions"><button class="icon-btn" id="search-toggle"
+                aria-label="Buscar productos">⌕</button><button class="icon-btn" id="cart-open"
+                aria-label="Abrir carrito">◧ <span id="cart-count">0</span></button><a class="btn small"
+                href="#bicicletas">Ver catálogo ↗</a><button class="header-wa text-btn"
+                data-wa="Hola, quiero información.">WhatsApp</button><button id="menu-toggle" class="icon-btn mobile"
+                aria-label="Abrir menú" aria-expanded="false">☰</button></div>
+    </header>
+    <main id="contenido">
+        <section class="hero" id="inicio">
+            <div class="hero-bg" id="hero-image"></div>
+            <div class="hero-content"><span class="eyebrow">TU PRÓXIMA RUTA EMPIEZA AQUÍ</span>
+                <h1>Todo para tu<br>bicicleta.<br><em>Todo para salir a rodar.</em></h1>
+                <p>Encuentra bicicletas, repuestos, accesorios y servicio técnico especializado para mantenerte siempre
+                    listo para la ruta.</p>
+                <div class="actions"><a class="btn" href="#bicicletas">Explorar catálogo ↗</a><button
+                        class="btn outline light" data-wa="Hola, quiero cotizar un producto.">Cotizar por
+                        WhatsApp</button></div>
+                <div class="hero-tags"><span>🚲 Bicicletas</span><span>⚙ Repuestos</span><span>⚒ Taller</span><span>◈
+                        Accesorios</span></div>
+            </div>
+            <div class="hero-note"><span>LA CIUDAD. LA MONTAÑA. TU CAMINO.</span><strong>Nos mueve<br>lo mismo que a
+                    ti.</strong></div>
+        </section>
+        <div class="benefits"><span>↗ Asesoría para elegir mejor</span><span>⚙ Repuestos para cada ruta</span><span>⚒
+                Servicio técnico especializado</span><span>◎ Bogotá, sobre dos ruedas</span></div>
+        <section class="section" id="categorias">
+            <div class="section-heading">
+                <div><span class="eyebrow">UN SOLO LUGAR. TODAS LAS POSIBILIDADES.</span>
+                    <h2>Encuentra lo que necesitas</h2>
+                </div><a href="#bicicletas">Explora la tienda ↗</a>
+            </div>
+            <div class="category-grid" id="category-grid"></div>
+        </section>
+        <section class="section catalog-section" id="bicicletas">
+            <div class="section-heading">
+                <div><span class="eyebrow">ELIGE TU COMPAÑERA DE RUTA</span>
+                    <h2>Bicicletas para ir más lejos.</h2>
+                </div><span class="muted">Precios de referencia en COP</span>
+            </div>
+            <div class="searchbar"><span>⌕</span><input id="search" type="search"
+                    placeholder="Busca bicicletas, repuestos, accesorios..."
+                    aria-label="Buscar en todo el catálogo"><button class="text-btn" id="clear-search">Limpiar</button>
+            </div>
+            <div class="filters"><select id="category-filter" aria-label="Categoría">
+                    <option value="">Todas las categorías</option>
+                </select><select id="type-filter" aria-label="Tipo">
+                    <option value="">Todos los tipos</option>
+                    <option>MTB</option>
+                    <option>Urbana</option>
+                    <option>Ruta</option>
+                    <option>Gravel</option>
+                    <option>Eléctrica</option>
+                    <option>Infantil</option>
+                </select><select id="brand-filter" aria-label="Marca">
+                    <option value="">Todas las marcas</option>
+                </select><select id="size-filter" aria-label="Talla">
+                    <option value="">Todas las tallas</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>Única</option>
+                </select><select id="availability-filter" aria-label="Disponibilidad">
+                    <option value="">Todos los estados</option>
+                    <option value="available">Disponible</option>
+                    <option value="soldout">Agotado</option>
+                    <option value="coming">Próximamente</option>
+                </select><select id="price-filter" aria-label="Precio">
+                    <option value="">Cualquier precio</option>
+                    <option value="100000">Hasta $100.000</option>
+                    <option value="500000">Hasta $500.000</option>
+                    <option value="2000000">Hasta $2.000.000</option>
+                    <option value="99999999">Mayor precio primero</option>
+                </select></div>
+            <p id="result-count" class="muted" aria-live="polite"></p>
+            <div id="catalog" class="product-grid"></div><button class="btn outline more" id="show-more">Ver más
+                productos</button>
+        </section>
+        <section id="repuestos" class="section parts">
+            <div class="section-heading">
+                <div><span class="eyebrow">CADA PIEZA CUENTA</span>
+                    <h2>Repuestos y componentes</h2>
+                    <p>El detalle que hace que todo vuelva a funcionar.</p>
+                </div><button class="btn outline" data-filter="Repuestos">Ver todos los repuestos ↗</button>
+            </div>
+            <div class="parts-grid" id="parts-grid"></div>
+        </section>
+        <section class="finder section">
+            <div><span class="eyebrow">TE AYUDAMOS A ENCONTRARLO</span>
+                <h2>¿No sabes qué<br>repuesto necesitas?</h2>
+                <p>Explora opciones por tipo de bicicleta. Confirma medidas y referencia con el taller antes de comprar.
+                </p>
+            </div>
+            <div class="finder-form"><label>Tipo de bicicleta<select id="finder-type">
+                        <option>MTB</option>
+                        <option>Urbana</option>
+                        <option>Ruta</option>
+                        <option>Gravel</option>
+                        <option>Eléctrica</option>
+                    </select></label><label>Componente<select id="finder-part">
+                        <option>Frenos</option>
+                        <option>Transmisión</option>
+                        <option>Ruedas</option>
+                        <option>Suspensión</option>
+                        <option>Dirección</option>
+                        <option>Otros</option>
+                    </select></label><button id="find-parts" class="btn">Encontrar opciones ↗</button><button
+                    class="text-btn" data-wa="Hola, necesito ayuda para identificar un repuesto.">¿Tienes dudas?
+                    Pregúntanos por WhatsApp</button>
+                <div id="finder-result" aria-live="polite"></div>
+            </div>
+        </section>
+        <section class="section" id="destacados">
+            <div class="section-heading">
+                <div><span class="eyebrow">LOS FAVORITOS DE LA RUTA</span>
+                    <h2>Productos destacados</h2>
+                </div><a href="#bicicletas">Ver catálogo completo ↗</a>
+            </div>
+            <div class="product-grid" id="featured"></div>
+        </section>
+        <section class="section custom-bikes" id="personalizadas">
+            <div class="section-heading">
+                <div><span class="eyebrow">UNA BICICLETA CON TU IDENTIDAD</span>
+                    <h2>Tu idea. Tu estilo.<br><em>Tu bicicleta.</em></h2>
+                    <p>También creamos bicicletas personalizadas. Cuéntanos cómo imaginas la tuya y hagamos que cada
+                        detalle tenga tu sello.</p>
+                </div>
+                <div class="custom-intro"><span>DISEÑO · COMPONENTES · MONTAJE</span><button class="btn"
+                        data-wa="Hola, quiero cotizar una bicicleta personalizada. Tengo una idea de diseño y quiero conocer opciones.">Diseña
+                        la tuya ↗</button></div>
+            </div>
+            <div class="custom-gallery">
+                <figure class="custom-photo large"><img src="assets/img/custom-bike-01.webp"
+                        alt="Bicicleta personalizada RIDER BIKE, modelo de inspiración" loading="lazy">
+                    <figcaption><span>01 / CUSTOM BUILD</span><strong>Una bici, tu identidad</strong></figcaption>
+                </figure>
+                <figure class="custom-photo"><img src="assets/img/custom-bike-02.webp"
+                        alt="Detalle de bicicleta personalizada" loading="lazy">
+                    <figcaption><span>02 / COMPONENTES</span><strong>Detalles que cuentan</strong></figcaption>
+                </figure>
+                <figure class="custom-photo"><img src="assets/img/custom-bike-03.webp"
+                        alt="Proceso de montaje de bicicleta personalizada" loading="lazy">
+                    <figcaption><span>03 / MONTAJE</span><strong>Armada para ti</strong></figcaption>
+                </figure>
+                <figure class="custom-photo"><img src="assets/img/custom-bike-04.webp" alt="Bicicleta custom para rutas"
+                        loading="lazy">
+                    <figcaption><span>04 / TU PRÓXIMA RUTA</span><strong>Lista para rodar</strong></figcaption>
+                </figure>
+            </div>
+            <p class="custom-note">Cada proyecto empieza con tu idea. Personalizamos estilo, componentes y montaje para
+                crear una bicicleta que se sienta tuya.</p>
+        </section>
+        <section class="workshop" id="taller">
+            <div class="workshop-image" id="workshop-image"><span class="photo-label">EL CUIDADO QUE TU BICI
+                    MERECE.</span></div>
+            <div class="workshop-copy"><span class="eyebrow">MANOS EXPERTAS. KILÓMETROS POR DELANTE.</span>
+                <h2>Tu bici, lista<br>para la<br><em>próxima salida.</em></h2>
+                <p>Servicio técnico especializado. Reparamos, ajustamos y mantenemos tu bicicleta para que puedas seguir
+                    rodando con seguridad.</p>
+                <div id="service-list" class="service-list"></div><button class="btn"
+                    data-wa="Hola, quiero agendar un servicio para mi bicicleta.">Agendar servicio ↗</button>
+            </div>
+        </section>
+        <section class="section" id="servicios">
+            <div class="section-heading">
+                <div><span class="eyebrow">DALE MÁS VIDA A TU BICICLETA</span>
+                    <h2>Un mantenimiento a tu medida</h2>
+                </div><span class="muted">Valores ilustrativos · Repuestos por separado</span>
+            </div>
+            <div class="plans" id="plans"></div>
+        </section>
+        <section class="section" id="accesorios">
+            <div class="section-heading">
+                <div><span class="eyebrow">EQUÍPATE PARA EL CAMINO</span>
+                    <h2>Accesorios para ciclistas</h2>
+                </div><button class="btn outline" data-filter="Accesorios">Ver accesorios ↗</button>
+            </div>
+            <div id="accessory-tags" class="chips"></div>
+            <div class="product-grid" id="accessories"></div>
+        </section>
+        <section class="section tools-banner" id="herramientas">
+            <div><span class="eyebrow">EL AJUSTE PERFECTO</span>
+                <h2>Herramientas<br>y mantenimiento</h2>
+                <p>Desde un ajuste en casa hasta el trabajo de taller.</p>
+                <div id="tool-tags" class="chips"></div><button class="btn" data-filter="Herramientas">Ver herramientas
+                    ↗</button>
+            </div><img id="tools-image" alt="Herramientas y componentes para mantenimiento de bicicletas"
+                loading="lazy">
+        </section>
+        <section class="section" id="ofertas">
+            <div class="section-heading">
+                <div><span class="eyebrow">MÁS RUTA POR MENOS</span>
+                    <h2>Ofertas de la semana</h2>
+                </div><span class="muted">Ofertas de ejemplo · Sujetas a confirmación</span>
+            </div>
+            <div class="product-grid" id="offers"></div>
+        </section>
+        <section class="brands section"><span class="eyebrow">TRABAJAMOS CON MARCAS DE CONFIANZA</span>
+            <div><b>ALTURA</b><b>velora.</b><b>TRAK /</b><b>NÓMADA</b><b>TORQ</b></div><small>Marcas ilustrativas
+                reemplazables</small>
+        </section>
+        <section class="section" id="nosotros">
+            <div class="section-heading">
+                <div><span class="eyebrow">BOGOTÁ SE VIVE PEDALEANDO</span>
+                    <h2>Somos de los que salen a rodar.</h2>
+                </div>
+                <p class="about-text">RIDER BIKE reúne todo lo que necesita tu bicicleta: una nueva compañera de ruta,
+                    la pieza adecuada y un taller que la cuida. De la ciclovía al camino de montaña, queremos acompañar
+                    tu próxima salida.</p>
+            </div>
+            <h3>Nuestros clientes</h3>
+            <p class="muted">Testimonios ilustrativos para esta presentación.</p>
+            <div class="testimonials" id="testimonials"></div>
+        </section>
+        <section class="section">
+            <div class="section-heading">
+                <div><span class="eyebrow">NUESTRA PASIÓN NO SE QUEDA EN LA TIENDA</span>
+                    <h2>Así vivimos el ciclismo</h2>
+                </div>
+            </div>
+            <div class="gallery" id="gallery"></div>
+        </section>
+        <section class="section contact" id="contacto">
+            <div id="ubicacion"><span class="eyebrow">NOS VEMOS EN LA TIENDA</span>
+                <h2>Visítanos</h2>
+                <p>Tu próxima ruta puede empezar con una conversación.</p>
+                <div id="contact-details"></div>
+                <h3>Horarios</h3>
+                <p>Horario de atención por confirmar directamente con RIDER BIKE.</p><iframe
+                    title="Mapa de Bogotá, ubicación general"
+                    src="https://maps.google.com/maps?q=Bogota%20Colombia&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe><small>Mapa general de Bogotá; ubicación del
+                    local pendiente.</small>
+            </div>
+            <form id="contact-form">
+                <h3>Hablemos de tu bicicleta</h3>
+                <div class="form-grid"><label>Nombre<input name="nombre" required
+                            autocomplete="name"></label><label>Teléfono<input name="telefono" type="tel" required
+                            autocomplete="tel"></label><label>Correo<input name="correo" type="email" required
+                            autocomplete="email"></label><label>Tipo de consulta<select name="tipo">
+                            <option>Comprar un producto</option>
+                            <option>Repuestos y compatibilidad</option>
+                            <option>Agendar taller</option>
+                            <option>Otra consulta</option>
+                        </select></label></div><label>Producto o repuesto que buscas<input
+                        name="producto"></label><label>Mensaje<textarea name="mensaje" rows="5"
+                        required></textarea></label><button class="btn" type="submit">Enviar consulta ↗</button>
+                <p class="muted">La consulta se prepara para WhatsApp. Tú decides cuándo enviarla.</p>
+                <p id="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div><a class="logo logo-image footer-logo" href="#inicio" aria-label="RIDER BIKE - Inicio"><img
+                        src="assets/img/rider-logo.png" alt="Logo Rider Bike"><span>RIDER BIKE</span></a>
+                <p>Todo para tu bicicleta.<br>Todo para salir a rodar.</p>
+            </div>
+            <div>
+                <h4>Bicicletas</h4><a href="#bicicletas">MTB</a><a href="#bicicletas">Urbanas</a><a
+                    href="#bicicletas">Ruta</a><a href="#bicicletas">Eléctricas</a>
+            </div>
+            <div>
+                <h4>Repuestos</h4><a href="#repuestos">Transmisión</a><a href="#repuestos">Frenos</a><a
+                    href="#repuestos">Ruedas</a><a href="#repuestos">Componentes</a>
+            </div>
+            <div>
+                <h4>Servicios</h4><a href="#taller">Taller</a><a href="#servicios">Mantenimiento</a><a
+                    href="#taller">Reparaciones</a>
+            </div>
+            <div>
+                <h4>Atención</h4><a href="#contacto">Contacto</a><button
+                    data-wa="Hola, quiero información.">WhatsApp</button><a href="#ubicacion">Ubicación y
+                    horarios</a><button id="social-info">Instagram · Facebook<br>TikTok · YouTube</button>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 RIDER BIKE. Todos los derechos reservados.</span><span>Demostración ·
+                Productos y datos comerciales ficticios</span></div>
+    </footer>
+    <button class="wa-float" data-wa="Hola, quiero información sobre RIDER BIKE." aria-label="Consultar por WhatsApp">◉
+        <span>¿Te ayudamos?</span></button>
+    <dialog id="product-dialog"><button class="close" data-close aria-label="Cerrar">×</button>
+        <div id="product-detail"></div>
+    </dialog>
+    <dialog id="cart-dialog"><button class="close" data-close aria-label="Cerrar">×</button>
+        <h2>Tu próxima rodada</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div><button class="btn" id="checkout">Solicitar pedido por WhatsApp ↗</button>
+    </dialog>
+    <dialog id="wa-dialog"><button class="close" data-close aria-label="Cerrar">×</button>
+        <h2>Tu consulta está lista</h2>
+        <p>El WhatsApp de la tienda aún no está configurado. Puedes copiar tu mensaje.</p><textarea id="wa-message"
+            rows="6" readonly></textarea><button class="btn" id="copy-message">Copiar mensaje</button>
+        <p id="copy-status" role="status"></p>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/store-sync.js"></script>
+</body>
+
+</html>
